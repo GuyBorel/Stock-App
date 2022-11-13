@@ -58,12 +58,6 @@ export class DashboardComponent implements OnInit {
    */
 
   backToListsStock() {
-    this.router.navigateByUrl(`track-by`).then((response) => {
-      if (response) {
-        console.log('Navigation is successful!');
-      } else {
-        console.log('Navigation has failed!');
-      }
-    });
+    this.router.navigateByUrl(`track-by`);
   }
 }

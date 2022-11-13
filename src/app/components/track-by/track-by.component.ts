@@ -65,13 +65,7 @@ export class TrackByComponent implements OnInit {
   }
 
   uploadSentimentData(index: string) {
-    this.route.navigateByUrl(`sentiment/${index}`).then((response) => {
-      if (response) {
-        console.log('Navigation is successful!');
-      } else {
-        console.log('Navigation has failed!');
-      }
-    });
+    this.route.navigateByUrl(`sentiment/${index}`);
   }
 
   shareData(tmp: string, description: string) {

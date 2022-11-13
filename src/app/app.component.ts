@@ -25,11 +25,6 @@ import {
 export class AppComponent implements OnInit, AfterViewInit {
   title = 'Stock Tracking App';
 
-  form = {
-    symbol: '',
-    exchange: 'Nasdaq',
-  };
-
   ngOnInit(): void {
     // url to backend service
   }
