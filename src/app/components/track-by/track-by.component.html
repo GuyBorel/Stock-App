@@ -1,0 +1,65 @@
+<html>
+  <body>
+    <ng-container class="container-1">
+      <div class="card-header">
+        <h1>STOCK TRACKER</h1>
+        <h2>Enter the symbol of a stock to track (i.e. AAPL, TSLA, GOOGL)</h2>
+      </div>
+
+      <form class="d-flex" [formGroup]="form" (ngSubmit)="uploadData()">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+          formControlName="stockId"
+        />
+        <button class="btn btn-outline-success" type="submit">
+          Track Stock
+        </button>
+      </form>
+    </ng-container>
+    <div class="card" *ngFor="let value of sentimentsArray">
+      <div class="card-button">
+        <button
+          class="btn btn-outline-danger"
+          mat-icon-button
+          mat-stroked-button
+          mat-flat-button
+          (click)="removeSentiment(value)"
+          color="accent"
+        >
+          X
+        </button>
+      </div>
+
+      <div class="dtest">
+        <h2>{{ value.description }}({{ value.symbol }})</h2>
+        <div *ngIf="value.changeToday > 0">
+          <div class="arrow-up">↑</div>
+          <p>Change today: {{ value.changeToday | percent }}</p>
+        </div>
+        <div *ngIf="value.changeToday < 0">
+          <div class="arrow-down">↓</div>
+          <p>Change today: {{ value.changeToday | percent }}</p>
+        </div>
+
+        <p>Current price: {{ value.currentPrice | currency }}</p>
+        <p>Opening price: {{ value.openPrice | currency }}</p>
+        <p>High price: {{ value.highPrice | currency }}</p>
+
+        <button
+          class="btn btn-outline-success"
+          type="submit"
+          (click)="
+            uploadSentimentData(value.symbol);
+            shareData(value.symbol, value.description)
+          "
+        >
+          Go to social sentiment details >
+        </button>
+      </div>
+      <br /><br />
+    </div>
+  </body>
+</html>

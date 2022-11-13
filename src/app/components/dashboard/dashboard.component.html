@@ -1,0 +1,80 @@
+<html xmlns="http://www.w3.org/1999/html">
+  <head>
+    <title><h1>dashboard works</h1></title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>{{ description }} ({{ valuesDashboard }})</h2>
+
+      <ng-container class="card-group">
+        <div class="card-body" *ngIf="insideSentiments">
+          <div class="row">
+            <div class="col-4">
+              <h2>AUGUST</h2>
+              <div class="card" *ngIf="insideSentiments[0].change < 0">
+                Change: {{ insideSentiments[0].change }}
+                <br />
+                MSPR: {{ insideSentiments[0].MSPR }}
+                <div class="arrow-down">↓</div>
+              </div>
+
+              <div class="card" *ngIf="insideSentiments[0].change > 0">
+                Change: {{ insideSentiments[0].change }}
+                <br />
+                MSPR: {{ insideSentiments[0].MSPR }}
+                <div class="arrow-up">↑</div>
+              </div>
+            </div>
+
+            <div class="col-4">
+              <h2>SEPTEMBER</h2>
+              <div class="card" *ngIf="insideSentiments[1].change < 0">
+                Change: {{ insideSentiments[1].change }}
+                <br />
+                MSPR: {{ insideSentiments[1].MSPR }}
+                <div class="arrow-down">↓</div>
+              </div>
+
+              <div class="card" *ngIf="insideSentiments[1].change > 0">
+                Change: {{ insideSentiments[1].change }}
+                <br />
+                MSPR: {{ insideSentiments[1].MSPR }}
+                <div class="arrow-up">↑</div>
+              </div>
+            </div>
+
+            <div class="col-4">
+              <h2>OCTOBER</h2>
+              <div class="card" *ngIf="insideSentiments[2].change < 0">
+                Change: {{ insideSentiments[2].change }}
+                <br />
+                MSPR: {{ insideSentiments[2].MSPR }}
+                <div class="arrow-down">↓</div>
+              </div>
+
+              <div class="card" *ngIf="insideSentiments[2].change > 0">
+                Change: {{ insideSentiments[2].change }}
+                <br />
+                MSPR: {{ insideSentiments[2].MSPR }}
+                <div class="arrow-up">↑</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+    <br />
+    <br />
+
+    <div class="btn-back">
+      <button
+        class="btn btn-outline-success"
+        type="submit"
+        (click)="backToListsStock()"
+      >
+        < Back to list of stocks
+      </button>
+    </div>
+  </body>
+</html>

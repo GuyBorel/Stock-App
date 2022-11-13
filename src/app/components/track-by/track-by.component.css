@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+}
+
+.d-flex {
+  color: black;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: center;
+}
+
+.dtest {
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 50px;
+  -webkit-box-shadow: 0px 0px 50px 30px #ffb700;
+  -moz-box-shadow: 0px 0px 50px 30px #ffb700;
+  box-shadow: 0px 0px 50px 30px #ffb700;
+  position: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #dceeff;
+  backface-visibility: visible;
+  background-position: center;
+}
+
+.btn btn-outline-success {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  display: flex;
+}
+
+.card-header {
+  background-color: transparent;
+  border-bottom: 1px solid white;
+  justify-content: center;
+  position: center;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.btn btn-outline-primary {
+  background-color: transparent;
+  border: 1px solid white;
+  position: center;
+  align-content: flex-end;
+  align-items: flex-end;
+  justify-content: right;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.cdk-overlay-pane.my-dialog {
+  position: relative !important;
+}
+
+.close {
+  margin-right: -100px;
+  color: red;
+  margin-top: 1px;
+  background-color: transparent;
+}
+
+.container-1 {
+  margin-top: 50px;
+  -webkit-box-shadow: 0px 0px 50px 30px #ff0000;
+  -moz-box-shadow: 0px 0px 50px 30px #ff0000;
+  box-shadow: 0px 0px 50px 30px #ff0000;
+  position: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card-header {
+  border-bottom: none;
+  position: relative;
+  margin-top: 5px;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  background-color: aqua;
+}
+
+.btn-close {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  padding: 12px 16px;
+  transform: translate(0%, -50%);
+}
+
+.btn-close:hover {
+  background: #bbb;
+}
+
+.arrow-down,
+.arrow-up {
+  height: 35px;
+  width: 25px;
+  backface-visibility: visible;
+  display: flex;
+  align-content: center;
+  align-items: flex-end;
+  position: center;
+  padding-left: 60px;
+  padding-bottom: 0;
+  font-size: 50px;
+  margin-top:20px;
+}
+
+.arrow-up {
+  color: green;
+}
+
+.arrow-down {
+  color: red;
+}
