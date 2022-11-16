@@ -1,8 +1,8 @@
-import {Injectable} from '@angular/core';
-import {HttpClient, HttpParams} from '@angular/common/http';
-import {Observable} from 'rxjs';
-import {environment} from '../../environments/environment';
-import {Sentiment} from '../models/sentiment';
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
+import { Sentiment } from '../models/sentiment';
 
 @Injectable({
   providedIn: 'root',
@@ -43,7 +43,7 @@ export class StockDataService {
         .append('q', name)
         .append('token', environment.token);
       this.http
-        .get<any>(environment.nameStockUrl, {params: parameter})
+        .get<any>(environment.nameStockUrl, { params: parameter })
         .toPromise()
         .then(
           (res) => {

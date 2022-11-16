@@ -18,11 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    TrackByComponent,
-    DashboardComponent,
-  ],
+  declarations: [AppComponent, TrackByComponent, DashboardComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -13,7 +13,7 @@ import { Sentiment } from '../../models/sentiment';
   styleUrls: ['./dashboard.component.css'],
 })
 export class DashboardComponent implements OnInit {
-  insideSentiments: InsideSentiment[] = [] ;
+  insideSentiments: InsideSentiment[] = [];
   description: string = '';
   @Input() valuesDashboard: any;
   sentimentsArray: Sentiment[] = [];
